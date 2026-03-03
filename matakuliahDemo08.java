@@ -21,8 +21,10 @@ public class matakuliahDemo08 {
             jumlahJam = Integer.parseInt(dummy);
             System.out.println("-------------------------------");
 
-            arrayOfMatakuliah[i] = new matakuliah08(kode, nama, sks, jumlahJam);
+            arrayOfMatakuliah[i] = new matakuliah08();
+            arrayOfMatakuliah[i].tambahData(kode, nama, sks, jumlahJam);
         }
+
         for (int i = 0; i < 3; i++) {
             System.out.println("Data Matakuliah ke-" + (i + 1));
             System.out.println("Kode        : " + arrayOfMatakuliah[i].kode);
@@ -31,6 +33,8 @@ public class matakuliahDemo08 {
             System.out.println("Jumlah Jam  : " + arrayOfMatakuliah[i].jumlahJam);
             System.out.println("-------------------------------");
         }
+
         sc.close();
     }
 }
+
