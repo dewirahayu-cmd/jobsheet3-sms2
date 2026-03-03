@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class DosenDemo08 {
     public static void main(String[] args) {
 
@@ -30,11 +29,22 @@ public class DosenDemo08 {
             arrayOfDosen[i] = new Dosen08(kode, nama, jenisKelamin, usia);
         }
 
-        System.out.println("\n===== DATA DOSEN =====");
+        DataDosen08 data = new DataDosen08();
 
-        for (Dosen08 d : arrayOfDosen) {
-            d.cetakInfo();
-        }
+        System.out.println("\n===== SEMUA DATA DOSEN =====");
+        data.dataSemuaDosen(arrayOfDosen);
+
+        System.out.println("\n===== JUMLAH DOSEN PER JENIS KELAMIN =====");
+        data.jumlahDosenPerJenisKelamin(arrayOfDosen);
+
+        System.out.println("\n===== RERATA USIA PER JENIS KELAMIN =====");
+        data.rerataUsiaDosenPerJenisKelamin(arrayOfDosen);
+
+        System.out.println("\n===== DOSEN PALING TUA =====");
+        data.infoDosenPalingTua(arrayOfDosen);
+
+        System.out.println("\n===== DOSEN PALING MUDA =====");
+        data.infoDosenPalingMuda(arrayOfDosen);
 
         sc.close();
     }
